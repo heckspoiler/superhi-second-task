@@ -1,10 +1,8 @@
 :root {
-      box-sizing: border-box;
-      font-size: 16px;
-      margin: 0;
-      padding: 0;
+
       --para-font: "IBM Plex Mono", monospace;
       --heading-font: "Young Serif", serif;
+      --heading-font-two: "Fanatiqs", cursive;
 }
 
 @font-face {
@@ -19,6 +17,85 @@
             url("./fonts/youngserif.woff") format("woff");
 }
 
+@font-face {
+      font-family: "Fanatiqs";
+      src: url("./fonts/Fanatiqs.woff2") format("woff2"),
+            url("./fonts/Fanatiqs.woff") format("woff");
+}
+
+
+body {
+      font-family: var(--para-font);
+      font-size: 16px;
+      line-height: 1.5;
+      background-color: #ffffff;
+      color: #2a2a2a;
+      width: 620px;
+      box-sizing: border-box;
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+}
+
 h1 {
-      font-family: var(--para-font)
+      font-family: var(--heading-font-two);
+      font-size: 24px;
+      font-weight: 700;
+}
+
+nav {
+      position: fixed;
+      font-family: var(--heading-font-two);
+      top: 0;
+      left: 0;
+      width: 240px;
+      height: 100vh;
+      background-color: #00b89d;
+      color: white;
+      font-size: 1.5rem;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      justify-content: center;
+      /* transform: translateX(-100%); */
+}
+
+nav a {
+      text-decoration: none;
+      color: #ffffff;
+      margin-left: 32px;
+      transition: color 0.3s ease;
+
+}
+
+nav a:hover {
+      text-decoration: none;
+      color: #ffffffc2;
+      margin-left: 32px;
+}
+
+main {
+      position: relative;
+      z-index: 1;
+      background-color: white;
+      min-height: 100vh;
+      transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+}
+
+main.open {
+      transform: translate(240px, 0);
+}
+
+a.toggle-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 24px;
+      text-decoration: none;
+      color: #2a2a2a;
+}
+
+a.toggle-nav img {
+      margin: 0 5px 0 0;
+      vertical-align: middle;
 }
