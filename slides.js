@@ -27,3 +27,17 @@ slideArea.addEventListener("click", function () {
   images[currentSlide].style.zIndex = z;
   images[currentSlide].style.animation = "fade 0.5s";
 });
+
+slideArea.addEventListener("mouseover", function () {
+  images.forEach((image) => {
+    const x = 10 * Math.floor(Math.random() * 5) - 50;
+    const y = 10 * Math.floor(Math.random() * 5) - 50;
+    image.style.transform = `translate(${x}px, ${y}px)`;
+  });
+});
+
+slideArea.addEventListener("mouseout", function () {
+  images.forEach((image) => {
+    image.style.transform = "";
+  });
+});
