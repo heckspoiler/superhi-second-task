@@ -136,3 +136,19 @@ a.button {
 a.button:hover {
       background-color: #00a48c;
 }
+
+div.slides {
+      height: 475px;
+      position: relative;
+}
+
+div.slides img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 8%;
+}
+
+div.slides img:nth-child(1) {
+      z-index: 1;
+}
