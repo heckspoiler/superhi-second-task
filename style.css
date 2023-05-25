@@ -1,0 +1,24 @@
+:root {
+      box-sizing: border-box;
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+      --para-font: "IBM Plex Mono", monospace;
+      --heading-font: "Young Serif", serif;
+}
+
+@font-face {
+      font-family: "IBM Plex Mono";
+      src: url("./fonts/ibm-plex-mono.woff2") format("woff2"),
+            url("./fonts/ibm-plex-mono.woff") format("woff");
+}
+
+@font-face {
+      font-family: "Young Serif";
+      src: url("./fonts/youngserif.woff2") format("woff2"),
+            url("./fonts/youngserif.woff") format("woff");
+}
+
+h1 {
+      font-family: var(--para-font)
+}
