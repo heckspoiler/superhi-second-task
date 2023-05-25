@@ -30,8 +30,9 @@ slideArea.addEventListener("click", function () {
 
 slideArea.addEventListener("mouseover", function () {
   images.forEach((image) => {
-    const x = 10 * Math.floor(Math.random() * 5) - 50;
-    const y = 10 * Math.floor(Math.random() * 5) - 50;
+    // with this technique (15 * xxxx - 50) we will snap everything to a grid, we'll create a grid
+    const x = 15 * Math.floor(Math.random() * 5) - 50;
+    const y = 15 * Math.floor(Math.random() * 5) - 50;
     image.style.transform = `translate(${x}px, ${y}px)`;
   });
 });
